@@ -13,3 +13,71 @@
 .job-skills {
   font-size: .8em;
 }
+
+h2:first-of-type {
+  color: red;
+}
+/*example of pseudo-class selector*/
+
+ul > li {
+  font-style: italic;
+  font-variant: small-caps;
+}
+
+/*Cascading Style Sheets*/
+/*Within CSS, all styles cascade from the top of a style sheet to the bottom, allowing different styles to be added or overwritten as the style sheet progresses.
+
+For example, say we select all paragraph elements at the top of our style sheet and set their background color to orange and their font size to 24 pixels. Then towards the bottom of our style sheet, we select all paragraph elements again and set their background color to green, as seen here.  Because the paragraph selector that sets the background color to green comes after the paragraph selector that sets the background color to orange, it will take precedence in the cascade. All of the paragraphs will appear with a green background. The font size will remain 24 pixels because the second paragraph selector didn’t identify a new font size.
+
+The cascade also works with properties inside individual selectors.  All styles will cascade from the top of our style sheet to the bottom of our style sheet. There are, however, times where the cascade doesn’t play so nicely. Those times occur when different types of selectors are used and the specificity of those selectors breaks the cascade.
+
+Every selector in CSS has a specificity weight. A selector’s specificity weight, along with its placement in the cascade, identifies how its styles will be rendered.  three different types of selectors: the type, class, and ID selectors. Each of these selectors has a different specificity weight.
+
+The type selector has the lowest specificity weight and holds a point value of 0-0-1. The class selector has a medium specificity weight and holds a point value of 0-1-0. Lastly, the ID selector has a high specificity weight and holds a point value of 1-0-0. As we can see, specificity points are calculated using three columns. The first column counts ID selectors, the second column counts class selectors, and the third column counts type selectors.
+
+What’s important to note here is that the ID selector has a higher specificity weight than the class selector, and the class selector has a higher specificity weight than the type selector. The higher the specificity weight of a selector, the more superiority the selector is given when a styling conflict occurs. For example, if a paragraph element is selected using a type selector in one place and an ID selector in another, the ID selector will take precedence over the type selector regardless of where the ID selector appears in the cascade.*/
+
+/*PSEUDO-SELECTORS:
+
+Let's consider: div p
+The above is known as a descendant selector. It selects all P elements that are descendants of DIV elements.
+
+Now consider:
+This too is a descendant selector that selects ALL elements that are the fourth child of their parent.
+
+Now consider:  p :nth-child(4)
+This too is a descendant selector that selects all elements that are the fourth child of their parent, that are descendants of a P element.
+
+NOW CONSIDER:  p:nth-child(4)
+This is not a descendant selector, but a direct pseudo-class of P elements.  This selector matches every P element that is the fourth child of its parent, for example:
+
+<body>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p>p:nth-child(4)</p>
+  <p></p>
+  <div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p>p:nth-child(4)</p>
+    <p></p>
+  </div>
+</body>
+
+IMPORTANT: The space is an important character in a selector.  It's presence represents a descendant selector while it's absence represents a pseudo-class selector.
+  -If you don't have a space, like in body:nth-child(4), it means "find the body tag that is an nth-child".(PSEUDO-SELECTOR)
+  -If you have a space, like in body :nth-child(4), it means "find the nth-child of the body tag".  (DESCENDANT SELECTOR)
+
+EXAMPLE:
+p :nth-child(4) is the fourth child of a P element.
+(Descendant selector)
+vs.
+p:nth-child(4) (no space) selects only a P, and then only if it is the fourth child of its parent element.
+(direct Pseudo-class)
+
+GENERAL USAGE RULES:
+element :nth-child(4) selects only those fourth child elements that descend from 'element' (element in this case is the 'ancestor' since this can reach down many generations.
+
+'element:nth-child(4)` can only select 'element if it is the fourth child of its parent element (could be any parent).*/
