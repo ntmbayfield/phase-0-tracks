@@ -1,6 +1,7 @@
-#contact-info p{
+#contact-info p {
   font-size: .8em;
 }
+/*example of using id as a selector*/
 
 .job {
   border:  2px solid;
@@ -9,10 +10,12 @@
   border-radius: 25px;
   margin-bottom: 10px;
 }
+/*example of using class as a selector; adjusting margin and padding; adjusting a border; using a hex color code*/
 
 .job-skills {
   font-size: .8em;
 }
+/*example of adding a class to ul elements in the HTML,and then using that class as a selector in my CSS to change font-size to .8em*/
 
 h2:first-of-type {
   color: red;
@@ -23,6 +26,8 @@ ul > li {
   font-style: italic;
   font-variant: small-caps;
 }
+/*example of selecting an element inside an element*/
+
 
 /*Cascading Style Sheets*/
 /*Within CSS, all styles cascade from the top of a style sheet to the bottom, allowing different styles to be added or overwritten as the style sheet progresses.
