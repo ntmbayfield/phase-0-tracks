@@ -1,0 +1,15 @@
+#contact-info p{
+  font-size: .8em;
+}
+
+.job {
+  border:  2px solid;
+  padding: 8px 20px;
+  background: #e9e5dc;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.job-skills {
+  font-size: .8em;
+}
