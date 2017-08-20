@@ -9,14 +9,14 @@
 
 #glasses {
   position: absolute;
-  bottom: 445px;
+  bottom: 400px;
   left: 650px;
   z-index: 1;
 }
 
 #hat {
   position: absolute;
-  top: 155px;
+  bottom: 465px;
   left: 590px;
   z-index: 2;
 }
